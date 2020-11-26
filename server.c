@@ -1,7 +1,8 @@
 #include <rpc/rpc.h>
 #include "hw.h"
 
-char **hw_1_svc(void *a, struct svc_req *req) {
+char **hw_1_svc(void *a, struct svc_req *req)
+{
     static char msg[256];
     static char *p;
 
@@ -10,5 +11,5 @@ char **hw_1_svc(void *a, struct svc_req *req) {
     p = msg;
     printf("Returning...\n");
 
-    return(&p);
+    return (&p);
 }
